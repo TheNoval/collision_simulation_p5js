@@ -7,7 +7,7 @@ function setup () {
     let colourB = [0, 0, 255] // blue
     let colours = [[180, 100, 0], [180, 0, 100], [100, 180, 0], [0, 180, 100], [100, 0, 180], [0, 100, 180]]
     let velBounds = 10
-    let numBalls = 50
+    let numBalls = 120
 
     // Test
     // A = new Ball(
