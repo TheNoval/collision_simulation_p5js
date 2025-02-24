@@ -1,12 +1,13 @@
 function setup () {
-    createCanvas(800, 850);
+    const cnv = createCanvas(window.innerWidth, window.innerHeight);
+    cnv.position(0, 0);
     let sizeA = 100
     let sizeB = 100
     let colourA = [0, 255, 0] // green
     let colourB = [0, 0, 255] // blue
     let colours = [[180, 100, 0], [180, 0, 100], [100, 180, 0], [0, 180, 100], [100, 0, 180], [0, 100, 180]]
     let velBounds = 10
-    let numBalls = 10
+    let numBalls = 50
 
     // Test
     // A = new Ball(

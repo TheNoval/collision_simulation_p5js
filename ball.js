@@ -1,3 +1,6 @@
+const GRAVITY = 1/180;
+const FRICTION = 0.01;
+
 class Ball {
     constructor(startPos, startVel, size, colour) {
         this.position = startPos;
@@ -30,11 +33,18 @@ class Ball {
             this.velocity.x *= -1;
             this.friction()
         }
+        this.gravity()
         
     }
-
+    gravity() {
+        this.velocity.y += GRAVITY*this.size;
+    }
     friction() {
-        this.velocity.setMag(this.velocity.mag() - 0.1)
+        if (this.velocity.mag() >= FRICTION) { 
+            this.velocity.setMag(this.velocity.mag() - FRICTION)
+        } else {
+            this.velocity.setMag(0)
+        }
     }
 
     collide(other) {
